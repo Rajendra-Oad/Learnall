@@ -1,0 +1,41 @@
+body {
+    background-color: #f8f9fa; 
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.btn-primary {
+    background-color: #f87b83;
+    border-color: transparent;
+    transition: all 0.7s;
+}
+
+
+.btn-primary:hover {
+    background-color: #ffdcde;
+    color: #FF4F5A;
+    border: 1px solid #FF4F5A;
+}
+
+input {
+    height: 45px !important;
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid transparent;
+        border-radius: 20px; /* Add border radius */
+        background-color: #fff;
+    }
+
+    ::placeholder {
+        color: #00000090;
+    }
+}

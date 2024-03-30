@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-4 d-flex align-items-center text-dark" routerLink="/dashboard">
+            <h3><i class="fa fa-user fa-solid me-2"></i>{{user}}</h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto middle-nav-items d-flex align-items-center justify-content-center">
+                <li class="nav-item my-2 my-md-0 mt-4 mt-md-0">
+                    <a class="nav-link links special-icons" routerLink="/home" routerLinkActive="active"
+                        id="active">Home</a>
+                </li>
+                <li class="nav-item my-2 my-lg-0 me-1">
+                    <a class="nav-link links special-icons" routerLink="/users" routerLinkActive="active">Users</a>
+                </li>
+                <li class="nav-item my-2 my-lg-0 ">
+                    <button class="btn btn-danger rounded-3 w-100 py-2 fw-medium d-flex align-items-center justify-content-center"
+                        (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i><span
+                            class="me-auto">LogOut</span></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
