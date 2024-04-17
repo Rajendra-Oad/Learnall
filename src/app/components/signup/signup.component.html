@@ -38,12 +38,18 @@
                             <span class="error-alert"><i class="fa-solid fa-circle-exclamation p-0 me-2 mt-2"></i>Fill
                                 the Phone Number</span>
                         </div>
-                        <input type="password" class="password mt-3 mb-1 input-field" required placeholder="Password"
-                            name="password" [(ngModel)]="signup.password" #password="ngModel"><br>
-                        <div *ngIf="password.invalid && (password.touched || password.dirty)">
-                            <span class="error-alert"><i class="fa-solid fa-circle-exclamation p-0 me-2 mt-2"></i>Fill
-                                the above Password</span>
-                        </div>
+                        <div class="input-wrapper">
+                            <input type="{{ hidePassword ? 'password' : 'text' }}" class="password mt-3 mb-1 input-field" required placeholder="Password"
+                                   name="password" [(ngModel)]="signup.password" #password="ngModel">
+                            <span class="toggle-password" (click)="togglePass()">
+                              <i class="fa-solid {{ hidePassword ? 'fa-eye-slash' : 'fa-eye' }}"></i>
+                            </span>
+                          </div>
+                          <div *ngIf="password.invalid && (password.touched || password.dirty)">
+                            <span class="error-alert">
+                              <i class="fa-solid fa-circle-exclamation p-0 me-2 mt-2"></i>Fill the above Password
+                            </span>
+                          </div>
                         <button class="btn d-flex mt-5 align-items-center justify-content-center" type="submit"
                             (click)="register()" [disabled]="reg.invalid || signupSuccess">
                             <span *ngIf="!signupSuccess">Sign Up</span>

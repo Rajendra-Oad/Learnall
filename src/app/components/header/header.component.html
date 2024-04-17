@@ -1,12 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand ms-4 d-flex align-items-center text-dark" routerLink="/home">
+    <a class="navbar-brand d-flex align-items-center text-dark me-auto" routerLink="/home">
       <h3>Learn All</h3>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
+    <li class="nav-item position-relative special-icons d-lg-none d-flex">
+      <a class="nav-link cart-top-small-size" routerLink="/cart" routerLinkActive="active"
+        style="border-radius: 50%;width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background: #D8D9DF;"><i
+          class="fa-solid fa-cart-shopping" style="cursor: pointer;"></i></a>
+      <span
+        class="countCart position-absolute bg-dark text-light rounded-circle d-flex align-items-center justify-content-center">{{cartCount.length}}</span>
+    </li>
+    <button class=" navbar-toggler special-icons" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <img src="assets/images/menu.png" alt="" class="cart-top-small-size" style="width: 49px;border-radius: 50%;padding: 5px;">
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    
+    <div class="collapse py-4 py-lg-0 navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ms-auto middle-nav-items d-flex align-items-center justify-content-center">
         <li class="nav-item my-2 my-md-0 mt-4 mt-md-0">
           <a class="nav-link links special-icons" routerLink="/home" routerLinkActive="active" id="active">Home</a>
@@ -26,21 +34,21 @@
         <li class="nav-item my-2 my-lg-0">
           <a class="nav-link links special-icons" routerLink="/contact" routerLinkActive="active">Contact</a>
         </li>
-        <li class="nav-item my-2 my-lg-0 position-relative search-bar-contanier d-flex">
+        <li class="nav-item my-2 my-lg-0 position-relative search-bar-contanier d-none d-lg-flex">
           <input type="text" placeholder="Search" class="search-input-txt"
             style="border-right: 1px solid rgba(128, 128, 128, 0.096);">
           <a class="nav-link links icon-links search-icon special-icons" routerLinkActive="active"
             style="border-radius: 50%;width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background: #D8D9DF;"><i
               class="fa-solid fa-magnifying-glass" style="cursor: pointer; "></i></a>
         </li>
-        <li class="nav-item my-2 my-lg-0 position-relative special-icons">
+        <li class="nav-item my-2 my-lg-0 position-relative special-icons d-none d-lg-block">
           <a class="nav-link links icon-links " routerLink="/cart" routerLinkActive="active"
             style="border-radius: 50%;width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background: #D8D9DF;"><i
               class="fa-solid fa-cart-shopping" style="cursor: pointer;"></i></a>
           <span
             class="countCart position-absolute bg-dark text-light rounded-circle d-flex align-items-center justify-content-center">{{cartCount.length}}</span>
         </li>
-        <li class="nav-item my-2 my-lg-0 user-box position-relative" (click)="toggleDropdown()"
+        <li class="nav-item my-2 my-lg-0 user-box position-relative d-none d-lg-block" (click)="toggleDropdown()"
           [class.open]="openDropdown">
           <a class="nav-link links icon-links user special-icons" routerLinkActive="active"
             style="border-radius: 50%;width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background: #D8D9DF;"><i class="fa fa-user fa-solid" aria-hidden="true" style="cursor: pointer;"></i></a>

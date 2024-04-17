@@ -8,6 +8,7 @@ import { ApiService } from '../../service/api.service';
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
+  public hidePassword:boolean = true;
 
   public signup = {
     fname:"",
@@ -60,6 +61,10 @@ export class SignupComponent {
 
   redirectToAppleSignup(){
     window.open("https://appleid.apple.com/account","_blank");
+  }
+
+  togglePass(): void {
+    this.hidePassword =!this.hidePassword;
   }
 
 }

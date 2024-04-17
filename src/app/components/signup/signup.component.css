@@ -7,6 +7,27 @@ body {
     color: #000;
 }
 
+.input-wrapper {
+    position: relative;
+  }
+  
+  .password {
+    padding-right: 30px; /* Adjust padding to accommodate the icon */
+  }
+  
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the right distance from the input field */
+    transform: translateY(-50%);
+    cursor: pointer !important;
+  }
+  
+  .toggle-password i {
+    cursor: pointer;
+    color: gray;
+  }
+
 h3.signup {
     font-size: 50px;
     margin-top: 5rem ;

@@ -7,6 +7,28 @@ body {
   color: #000;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
+.password {
+  padding-right: 30px; /* Adjust padding to accommodate the icon */
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right distance from the input field */
+  transform: translateY(-50%);
+  cursor: pointer !important;
+}
+
+.toggle-password i {
+  cursor: pointer;
+  color: gray;
+}
+
+
 a.logo-sm {
   font-size: 50px !important;
 }
@@ -34,8 +56,7 @@ a.logo h4 {
   font-size: 27px;
 }
 
-input[type="email"],
-input[type="password"] {
+input {
   border: none;
   font-size: 18px;
   min-width: 320px;
@@ -44,23 +65,17 @@ input[type="password"] {
   outline: none;
 }
 
-input[type="email"]:hover,
-input[type="password"]:hover {
+input:hover {
   box-shadow: 0 1px 0 gray, 0 2px 0 rgba(128, 128, 128, 0.267) !important;
 }
 
-input[type="email"]:active,
-input[type="email"]:focus{
-  box-shadow: 0 1px 0 #058aff !important;
-}
-
-input[type="password"]:active,
-input[type="password"]:focus{
+input:active,
+input:focus{
   box-shadow: 0 1px 0 #058aff !important;
 }
 
 a.forgot-link {
-  color: rgba(0, 0, 0) !important;
+  color: rgba(0, 0, 0);
   font-size: 14px;
 }
 

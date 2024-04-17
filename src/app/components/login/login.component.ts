@@ -17,7 +17,7 @@ export class LoginComponent {
   }
 
   public msg:any;
-  public clr={red:false,green:false}
+  public clr={red:false,green:false};
   public loginSuccess:boolean=false;
   constructor(public api:ApiService,public router:Router){
 
@@ -65,6 +65,15 @@ export class LoginComponent {
 
   togglePass(){
     this.hidePassword = !this.hidePassword;
+  }
+
+  toggleIconVisibility(): void {
+    console.log('toggleIconVisibility');
+    if (this.login.password.length > 0) {
+      this.hidePassword = false;
+    } else {
+      this.hidePassword = true;
+    }
   }
 
 }

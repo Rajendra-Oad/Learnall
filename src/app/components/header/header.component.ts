@@ -14,9 +14,9 @@ export class HeaderComponent implements OnInit {
   constructor(public cartService:CartService,public router:Router) {}
   
   ngOnInit(): void {
-    if(!localStorage.getItem('email')) {
-      this.router.navigate(['/login']);
-    }
+    // if(!localStorage.getItem('email')) {
+    //   this.router.navigate(['/login']);
+    // }
     this.cartCount= this.cartService.getCartItems();
     this.user=localStorage.getItem('email');
     }

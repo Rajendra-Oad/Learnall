@@ -167,7 +167,15 @@ section.table-details {
 
 section.course-details {
     background-color: #ffffff;
-    padding: 140px 0;
+}
+
+.navbar-toggler {
+    outline: none;
+    box-shadow: none !important;
+    border: none !important;
+}
+video {
+    width: 75% !important;
 }
 
 .testimonials-container .card {
@@ -184,16 +192,25 @@ section.course-details {
 }
 
 
-section.quote {
+/* section.quote {
     background-color: #C19BF8;
-}
+} */
 
-section.quote .qoute-text h1 {
+/* section.quote .qoute-text h1 {
     font-size: 55px;
-}
+} */
 
 @media (max-width:576px) {
     .table-details  h1 {
         font-size: 35px !important;
+    }
+    video {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:767px) {
+    video {
+        width: 100% !important;
     }
 }
