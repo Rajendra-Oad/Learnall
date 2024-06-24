@@ -9,7 +9,7 @@ body {
 
 
 .btn-primary {
-    background-color: #f87b83;
+    background-color: var(--main-theme);
     border-color: transparent;
     transition: all 0.7s;
 }
